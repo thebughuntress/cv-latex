@@ -5,3 +5,5 @@ Files
 *.log
 *.out
 *.tex.bak
+
+**/cv.synctex.gz/
