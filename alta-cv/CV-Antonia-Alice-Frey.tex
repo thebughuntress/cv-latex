@@ -1,0 +1,256 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Antonia Alice Frey}
+\tagline{Software Engineer \& IT Consultant \& Proud Geek}
+\photoR{2.5cm}{./photo/photo.jpg}
+%\photoL{2cm}{./photo/photo.jpg}
+\personalinfo{
+  % Not all of these are required!
+  \email{antonia.frey@outlook.com}
+  %\phone{}
+  %\mailaddress{Address, Street, County}
+  \location{Freiburg, Germany}
+  %\homepage{}
+  %\twitter{}
+  \linkedin{antonia-alice-frey}
+  \github{thisisfrey}
+  % \orcid{}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  %% \printinfo{\faPaw}{Hey ho!}
+}
+  
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically break across pages if things get too long.
+\begin{paracol}{2}
+% -------------------------------------------------------------
+\cvsection{Experience}
+% -------------------------------------------------------------
+
+\cvevent{Software Engineer \& IT Consultant}{Devoteam}{February 2022 -- Ongoing}{Frankfurt, Germany - Remote}
+
+\begin{itemize}
+\item {Development of a CRUD dashboard and a PWA to manage energy and water meters with ReactTS}
+\item {Development of a technology radar for visualization and categorization of different technologies in the field of IT with VueTS}
+\item {Development of software to complement the CLI tool for network configuration with VueJS}
+\item {Test automation with Cypress (and Cucumber) and unit testing with Jest, integration in Gitlabs CI/CD pipeline}
+\item {Communication with the backend using REST APIs, Google Maps API and implementation of MongoDB database}
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineer \& Business Analyst}{ELCA Spain}{February 2021 -- January 2022}{Granada, Spain}
+
+\begin{itemize}
+\item {Automation of processes and implementation of new functionality in the ERP software with Python}
+\item {Adaptation and debugging of scripts to create business reports with Python and VBA}
+\item {Database queries with SQL (MySQL and Oracle) to verify correctness of data}
+\item {Business analysis for new features, writing user stories and acceptance criteria}
+\item {Organization of client meetings with clients in Switzerland and Spanish, German and French speaking colleagues}
+\end{itemize}
+
+%\divider
+%\cvevent{Software Engineer}{Intel Labs}{August 2019 -- January 2020}{Karlsruhe, Germany}
+
+\divider
+
+\cvevent{Software Engineer}{Intel Labs}{August 2019 -- January 2020}{Karlsruhe, Germany}
+
+\begin{itemize}
+\item {Automotive software development for an open-source simulator (CARLA.org) for autonomous driving research}
+        \item {Programming traffic scenarios which describe traffic situations and vehicle behaviors like a lane change}
+        \item{Implementing unsupported Parser features, testing and debugging}
+\end{itemize}
+
+
+% -------------------------------------------------------------
+\cvsection{A Day of My Life}
+% -------------------------------------------------------------
+
+\hspace*{-1em}  %% quick hack to move the wheelchart a bit left
+\wheelchart{1.5cm}{0.5cm}{%
+  10/13em/accent!30/Sleeping \& dreaming about work,
+  25/9em/accent!60/Meetings with clients and colleague to discuss issues,
+  5/11em/accent!10/\footnotesize\\[1ex] Responding emails and organizing my day,
+  20/11em/accent!40/Bug fixing,
+  5/8em/accent!20/\footnotesize Time on SO \& asking ChatGPT where to even start,
+  30/9em/accent/Programming,
+  5/8em/accent!20/Watching Netflix
+}
+
+%% Switch to the right column.
+\switchcolumn
+
+% -------------------------------------------------------------
+\cvsection{Life Philosophy}
+% -------------------------------------------------------------
+
+\begin{quote}
+``I like my code the way I like skiing: \\ fluent, precise and fast.''
+\end{quote}
+
+% -------------------------------------------------------------
+\cvsection{Most Proud Of}
+% -------------------------------------------------------------
+
+
+\cvachievement{\faTrophy}{Perseverance \& Persistence}{To finish my masters degree in electrical engineering while working.}
+
+\divider
+
+\cvachievement{\faChartLine}{Focus}{As an engineer, I am solution-driven and focusing on data \& numbers, rather than feelings.}
+
+\divider
+
+\cvachievement{\faFemale}{Women in Tech}{Colleagues respect my skills and abilities without gender judgment.}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Teamwork \& Giving back help}{I make time to help others, having experienced the value of colleagues' assistance.}
+
+\cvsection{Skills}
+%
+%\cvtag{Hard-working}
+%\cvtag{Curiosity}
+%\cvtag{Communication}\\
+%
+%\divider\smallskip
+
+\cvtag{JavaScript}
+\cvtag{TypeScript}
+\cvtag{Node.js}
+\cvtag{React}
+\cvtag{Angular}
+\cvtag{Vue}
+\cvtag{Cypress}
+\cvtag{Jest}
+\cvtag{Figma}
+
+\cvtag{Python}
+\cvtag{C++}
+\cvtag{Git}
+\cvtag{CI/CD Pipelining}
+\cvtag{Cloud Computing}
+\cvtag{Jira}
+\cvtag{Scrum}
+\cvtag{Linux}
+
+
+% -------------------------------------------------------------
+\cvsection{Languages}
+% -------------------------------------------------------------
+
+\cvskill{English}{5}
+\cvskill{German}{5}
+\cvskill{Spanish}{4.5}
+\cvskill{French}{2}
+
+% -------------------------------------------------------------
+\cvsection{Education}
+% -------------------------------------------------------------
+
+
+\cvevent{M.Sc. in Electrical Engineering and Information Technology}{Karlsruhe Institute of Technology}{October 2018 - December 2020}{}
+
+\divider
+
+\cvevent{B.Sc.\ in Electrical Engineering and Information Technology}{Karlsruhe Institute of Technology}{October 2013 -- October 2018}{}
+
+%\newpage
+%
+%\cvsection{Referees}
+%
+%% \cvref{name}{email}{mailing address}
+%\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+%{Address Line 1\\Address line 2}
+%
+%\divider
+%
+%\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+%{Address Line 1\\Address line 2}
+
+\end{paracol}
+
+\end{document}
