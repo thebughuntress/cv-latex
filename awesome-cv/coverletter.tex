@@ -1,0 +1,137 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\input{constants/configurations.tex}
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\definecolor{awesome}{HTML}{\COLOR}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{\HIGHLIGHT_TITLES}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\input{constants/personal-information.tex}
+% Available options: circle|rectangle,edge/noedge,left/right
+
+%\photo[right,rectangle,noedge]{./photo/photo.jpg}
+\name{\FIRST_NAME}{\LAST_NAME}
+\position{\POSITION}
+%\address{\ADRESS}
+\mobile{\MOBILE}
+\email{\EMAIL}
+\github{\GITHUB}
+\linkedin{\LINKEDIN}
+\homepage{\HOMEPAGE_URL}{Homepage}
+% \gitlab{\GITLAB}
+% \stackoverflow{\SO_ID}{\SO_NAME}
+% \twitter{\TWITTER}
+% \skype{\SKYPE}
+% \reddit{\REDDIT_ID}
+% \medium{\MEDIUM_ID}
+% \googlescholar{\GOOGLE_SCHOLAR_ID}{\GOOGLE_SCHOLAR_NAME}
+% \extrainfo{\EXTRA_INFO}
+
+\quote{\QUOTE}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {COMPANY}
+  {CITY, COUNTRY}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{POSITION}
+% How the letter is opened
+\letteropening{To the Esteemed Recruitment Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+%\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {\FIRST_NAME \LAST_NAME~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+I am writing to express my interest in the  POSITION for the TEAM\_NAME team.
+
+\lettersection{About Me}
+I hold a Master’s degree in Electrical Engineering with a specialization in Systems Engineering, graduating in December 2020. After completing my studies, I began my career at ELCA, a Swiss IT company, where I worked as a Systems Engineer. In this role, I was responsible for new features in the company-wide CRM software using Python and conducting business analysis to onboard and collaborate with new clients effectively.
+
+Currently, I work at Devoteam, where I transitioned to web development and cloud engineering. I have contributed to various projects in the automotive and energy sectors, focusing on helping clients reduce costs and enhance daily business outcomes. By creating better user interfaces, optimizing systems, and driving automation, I strive to deliver impactful and efficient solutions.
+
+
+\lettersection{Why Me?}
+With my professional experience and academic background I bring a strong foundation in developing, analyzing, and optimizing complex systems and the technical expertise and good understanding required to address complex challenges.I am an analytical, responsible, and organized software engineer, excited to learn new technologies, integrate into a new team, and bring fresh perspectives.
+
+I am looking forward to hearing from COMPANY.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}
