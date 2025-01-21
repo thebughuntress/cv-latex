@@ -1,3 +1,7 @@
+# Ignore the temp folder
+temp/
+
+# Ignore specific file types
 Files
 *.bak
 *.aux
@@ -5,4 +9,3 @@ Files
 *.out
 *.tex.bak
 *.synctex.gz
-
