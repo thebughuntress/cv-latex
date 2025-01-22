@@ -1,8 +1,10 @@
-# Ignore the temp folder
-temp/
+# Ignore the local folder
+local/
+
+# Ignore files
+personal-data-local.tex
 
 # Ignore specific file types
-Files
 *.bak
 *.aux
 *.log

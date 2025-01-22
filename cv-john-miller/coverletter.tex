@@ -38,6 +38,14 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
+% DATA
+%----------------------------------------------------------------------------------------
+
+% Import the personal data
+%\input{personal-data-example.tex}  
+\input{personal-data-example.tex}  
+
+%----------------------------------------------------------------------------------------
 % HEADER AND FOOTER CONFIGURATION
 %----------------------------------------------------------------------------------------
 \pagestyle{fancy}
@@ -48,33 +56,22 @@
 \fancyhead{}
 \fancyfoot[C]{%
     \vspace{0.2pt}\\
-    {\large \href{mailto:antonia.frey@outlook.com}{\faEnvelope}} \hspace{0.5cm}
-    {\large \href{https://wa.me/+4915146782868}{\faPhone}} \hspace{0.5cm}
-    {\large \href{https://github.com/thebughuntress}{\faGithub}} \hspace{0.5cm}
-    {\large \href{https://www.linkedin.com/in/antonia-alice-frey}{\faLinkedinSquare}}
+    {\large \href{mailto:\email}{\faEnvelope}} \hspace{0.5cm}
+    {\large \href{https://wa.me/\phone}{\faWhatsapp}} \hspace{0.5cm}
+    {\large \href{\github}{\faGithub}} \hspace{0.5cm}
+    {\large \href{\linkedin}{\faLinkedinSquare}}
 }
-
-
-
-
-
 
 %----------------------------------------------------------------------------------------
 %	YOUR NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-
-\hfill % Aligns the following block to the right
+\hfill 
 \begin{tabular}{@{}p{0.5cm}l@{}}   
- & \textbf{Antonia Frey} \\[0.8ex] % Name in bold and larger font
- & STREET \\[0.4ex] 
- & CITY \\[0.4ex] 
- & COUNTRY\\[0.8ex] 
-% & % Add clickable icons
-% \href{mailto:antonia.frey@outlook.com}{\faEnvelope} \hspace{0.2cm}
-% \href{https://wa.me/+4915146782868}{\faPhone} \hspace{0.2cm}
-% \href{https://github.com/thebughuntress}{\faGithub} \hspace{0.2cm}
-% \href{https://www.linkedin.com/in/antonia-alice-frey}{\faLinkedinSquare} \\
+ & \textbf{\name} \\[0.8ex]
+ & \street \\[0.4ex] 
+ & \city \\[0.4ex] 
+ & \country\\[0.8ex] 
 \end{tabular}
 \bigskip
 
@@ -82,20 +79,25 @@
 %----------------------------------------------------------------------------------------
 %	ADDRESSEE AND GREETING
 %----------------------------------------------------------------------------------------
+\newcommand{\COMPANY}{COMPANY}
+\newcommand{\ROLE}{ROLE}
+\newcommand{\CITY}{CITY}
+\newcommand{\COUNTRY}{COUNTRY}
 
 \begin{tabular}{@{}p{0cm}l@{}} 
- & \textbf{COMPANY NAME} \\[0.8ex] 
- & STREET \\[0.4ex] 
- & CITY \\[0.4ex] 
- & COUNTRY
+ & \textbf{\COMPANY} \\[0.8ex] 
+ %& STREET \\[0.4ex] 
+ & \CITY, \COUNTRY
 \end{tabular}
 
 \bigskip % Vertical whitespace
 
-\hfill \today \bigskip\\ % Date
+% Date -1 day
+%\hfill \today \bigskip\\ 
+\hfill \DTMdisplaydate{\year}{\month}{\numexpr\day-1}{.}
 
 % Custom bold, bigger, and underlined title
-\noindent \textbf{\underline{Application for Lead Frontend Developer}}
+\noindent \textbf{\underline{Application for \ROLE}}
 
 %----------------------------------------------------------------------------------------
 %	LETTER CONTENT
@@ -103,15 +105,15 @@
 To the Esteemed Hiring Team,
 \bigskip
 
-I am excited to apply for the XXX role at XXX in XXX. Since graduating in December 2020, I have been working as a software engineer with a primary focus on web development, Python programming, and some experience with cloud engineering.
+I am excited to apply for the \ROLE\ role at \COMPANY\ in \CITY. Since graduating in December 2020, I have been working as a software engineer with a primary focus on web development, Python programming, and some experience with cloud engineering.
 
-Working in IT consulting has given me a strong foundation in web development with Vue, React, TypeScript, and JavaScript. At Devoteam GmbH, I worked on projects across industries such as telecommunications, automotive, and energy. My role involved building new applications from the ground up, implementing new features, and fixing bugs while collaborating in agile and international teams and maintaining close contact with stakeholders to ensure alignment with business needs.
+Working in IT consulting has given me a strong foundation in web development with Python, React, TypeScript, and JavaScript. At Devoteam GmbH, I worked on projects across industries such as telecommunications, automotive, and energy. My role involved building new applications from the ground up, implementing new features, and fixing bugs while collaborating in agile and international teams and maintaining close contact with stakeholders to ensure alignment with business needs.
 
-Besides my technical background, I’d describe myself as flexible, communicative, and always eager to learn new technologies and share knowledge with others. My private GitHub profile reflects my passion for IT and programming beyond my professional projects. I thrive in collaborative environments, and working alongside skilled, motivated colleagues and supportive managers has contributed to my technical and personal growth. Along with enjoying the technical aspects, I also appreciate simplicity and thoughtful design, principles that lead to maintainable, efficient, and better solutions. I place a strong emphasis on testing to ensure that software is reliable, robust, and free from defects.
+Besides my technical background, I’d describe myself as flexible, communicative, and always eager to learn new technologies and share knowledge with others. My private GitHub profile reflects my passion for IT and programming beyond my professional projects. I thrive in collaborative environments, and working alongside skilled, motivated colleagues and supportive managers has contributed to my technical and personal growth. Along with enjoying the technical aspects, As a teamplayer, I also appreciate simplicity and thoughtful design, principles that lead to maintainable, efficient, and better solutions. I place a strong emphasis on testing to ensure that software is reliable, robust, and free from defects. If there are any skills or tools in the job description that I am not yet familiar with, I am eager to learn them.
 
-After four years in IT consulting, I am now seeking a new opportunity in the French-speaking area of Switzerland, with strong career prospects, preferably in a hybrid work model and a supportive team atmosphere, working on stable projects, where I can contribute my expertise and face new challenges.
+After four years of working remotely, I am looking for a new opportunity in the IT sector in \CITY, offering strong career prospects. I am eager to find a hybrid work model within a supportive team atmosphere, working on agile projects where I can apply my expertise, learn new skills, and embrace new challenges.
 
-I am looking forward to hearing from XXX. 
+I am looking forward to hearing from \COMPANY. 
 
 \bigskip
 
@@ -119,6 +121,6 @@ Sincerely,
 
 \vspace{20pt}
 
-Antonia Frey
+\name
 
 \end{document}
