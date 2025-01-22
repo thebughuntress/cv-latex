@@ -11,11 +11,13 @@
 \usepackage{xcolor}
 \usepackage{pifont}
 \usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
     
 \setlist{parsep=0pt, topsep=0pt, partopsep=1pt, itemsep=1pt, leftmargin=6mm}       
 \renewcommand{\familydefault}{\sfdefault}
 
-\definecolor{cvblue}{HTML}{0F2666} %1E3A8A
+\definecolor{cvblue}{HTML}{3C3C3C} %1E3A8A
 \newcommand{\is}{\par\vskip.5ex plus .4ex} 
 
 \newcommand{\job}[3]{%
@@ -36,8 +38,16 @@
 }
 
 \newcommand{\dates}[1]{\hfill\mbox{#1}}
-\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
-    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+
+\newcommand{\headleft}[1]{%
+    \vspace*{3ex}%
+    \centering % Centers the text
+    {\large\textsc{\textbf{#1}}}\par % Makes the text larger
+    \vspace*{-1.5ex}%
+    \hrulefill\par%
+    \vspace*{0.8ex}%
+}
+
 \newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
      \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
 
@@ -66,53 +76,79 @@
 \raggedright
 \vspace*{2.5ex}
 
-\Large Antonia \textbf{\textsc{Frey}} \normalsize 
+%\null\hfill\includegraphics[width=0.65\textwidth]{aaf.jpg}\hfill\null
 
-\null\hfill\includegraphics[width=0.65\textwidth]{aaf.jpg}\hfill\null
+\noindent
+\null\hfill%
+\begin{tikzpicture}
+    \clip (0,0) circle (2cm);
+    \node at (0,0) {\includegraphics[width=4cm]{aaf.jpg}}; 
+\end{tikzpicture}%
+\hfill\null
 
-\vspace*{0.5ex} 
+\vspace*{1ex}
+% Localized centering for the name
+{\centering 
+\LARGE \textbf{\textsc{Antonia Frey}}\\
+}
+\vspace*{1ex}
 
-\headleft{Profile Summary}
+
+\normalsize 
+
+\headleft{About Me}
 \parbox{1\textwidth}{
 {\small
 \justifying
-\noindent
-Software Engineer with 4+ years of experience in Python, web development frameworks, and Java. Since the beginning of my career, I have contributed to diverse projects across industries like telecommunications, automotive, and energy, building applications from scratch, implementing new features, and solving complex problems in agile, international teams. As a team player, I thrive in collaborative environments, enjoying the opportunity to work together to achieve goals. Moreover, I value simplicity, thoughtful design, and creating maintainable solutions, with a strong emphasis on testing to ensure robust, reliable software. Beyond my technical skills, I am flexible, communicative, and always eager to learn new technologies and share knowledge.
+\noindent Software Engineer with 4+ years of experience. Since the beginning of my career, I have contributed to diverse projects across industries like telecommunications, automotive, and energy, building applications from scratch, implementing new features, and finding solutions.\\
+As a team player, I enjoy working in agile, international teams. Beyond my technical skills, I am flexible, communicative, and always eager to learn new technologies and share knowledge. If there are any technologies or tools that I am not yet familiar with, I am eager to learn them.
 }}
 
 
-\headleft{Contact details}
+\headleft{Contact}
 {\small
-\href{mailto:antonia.frey@outlook.com}{\faEnvelope\ antonia.frey@outlook.com} \\[0.4ex]
-\href{https://wa.me/+4915146782868}{\faPhone\ +49 1514 6782868} \\[0.4ex]
-\href{https://www.linkedin.com/in/antonia-alice-frey}{\faLinkedinSquare\ Antonia Alice Frey} \\[0.4ex]
-\href{https://github.com/thebughuntress}{\faGithub\ thebughuntress} \\[0.4ex]
-\href{https://antoniaalicefrey.com}{\faHome\ antoniaalicefrey.com} \\[0.4ex]
-\faMapMarker\ Freiburg (DE) / Argentiere (FR)
+\begin{tabular}{@{}l@{\hspace{0.5em}}l} % Left-align icons and add spacing between columns
+\faEnvelope & \href{mailto:antonia.frey@outlook.com}{antonia.frey@outlook.com} \\[1ex]
+\faPhone & \href{https://wa.me/+4915146782868}{+49 1514 6782868} \\[1ex]
+\faLinkedinSquare & \href{https://www.linkedin.com/in/antonia-alice-frey}{Antonia Alice Frey} \\[1ex]
+\faGithub & \href{https://github.com/thebughuntress}{thebughuntress} \\[1ex]
+\faHome & \href{https://antoniaalicefrey.com}{antoniaalicefrey.com} \\[1ex]
+\end{tabular}
 }
+
 
 \headleft{Personal information}
 {\small
-Citizenship: \textbf{Swiss, German} \\[0.5ex]
-Languages:\\
-\begin{itemize}[leftmargin=1em]
-    \item \textbf{German} (C2)
-        \item \textbf{English} (C1)
-    \item \textbf{Spanish} (C1)
-    \item \textbf{French} (B1)
-\end{itemize}}
+\begin{tabular}{@{}l@{\hspace{0.5em}}l@{}} % Align text with space between columns
+\textbf{Citizenship:} & Swiss, German \\[1ex]
+\textbf{Located in:}  & Freiburg (Germany) \\ 
+                      & Les Houches (France) \\[1ex]
+\textbf{Languages:}   & \\[1ex] % Empty space for separation
+\end{tabular}
+
+\begin{itemize}[leftmargin=4em]
+    \item German (native language, C2)
+    \item English (C1)
+    \item Spanish (C1)
+    \item French (B1)
+\end{itemize}
+}
+
+
 
 \headleft{Technologies \& Tools}
 {\small
-\begin{itemize}[leftmargin=1em]
+\begin{itemize}[leftmargin=0.8em]
+    \setlength{\itemsep}{0.5em}
+    
     \item \textbf{Programming Languages}\\
-    Python, TypeScript, Java, C\#
+    Python, TypeScript, JS, Java, C\#
     \item \textbf{Frontend}\\
      React, Vue, Angular, Redux, Material UI, Bootstrap, Tailwind CSS, HTML/CSS
     \item \textbf{Backend}\\
     Python Django, NodeJS, MongoDB, SQL
     \item \textbf{Testing}\\
-    Java/Selenium, Postman (API Testing), Cypress / Cucumber, Jest
+    Java/Selenium, Cypress / Cucumber, Postman (API Testing), Jest
     \item \textbf{Agile Practices}\\
      Git, CI/CD, SCRUM, Jira, Confluence
 \end{itemize}
