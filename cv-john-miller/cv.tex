@@ -13,22 +13,24 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{xparse}
     
 \setlist{parsep=0pt, topsep=0pt, partopsep=1pt, itemsep=1pt, leftmargin=6mm}       
 \renewcommand{\familydefault}{\sfdefault}
 
-\definecolor{cvblue}{HTML}{3C3C3C} %1E3A8A
+\definecolor{cvblue}{HTML}{333333} %1E3A8A 3C3C3C
+%\definecolor{cvblue}{HTML}{FF0000} %1E3A8A 3C3C3C
 \newcommand{\is}{\par\vskip.5ex plus .4ex} 
 
 \newcommand{\job}[3]{%
     \is
-    \textbf{\textsc{#1}}\\%
-    \textbf{\textcolor{cvblue}{#2}} \dates{#3}
+    \textbf{\textcolor{cvblue} {\MakeUppercase{#1}}}\\
+    \textbf{#2} \dates{#3}
 }
 
 \newcommand{\education}[3]{%
     \is
-    \textbf{\textsc{\textcolor{black}{#1}}}\\
+    \textbf{\MakeUppercase{#1}}\\
     {#2}\\
     \dates{#3}
 }
@@ -39,17 +41,34 @@
 
 \newcommand{\dates}[1]{\hfill\mbox{#1}}
 
-\newcommand{\headleft}[1]{%
-    \vspace*{3ex}%
-    \centering % Centers the text
-    {\large\textsc{\textbf{#1}}}\par % Makes the text larger
-    \vspace*{-1.5ex}%
-    \hrulefill\par%
-    \vspace*{0.8ex}%
+
+\NewDocumentCommand{\headleft}{o m}{%
+    \IfNoValueTF{#1}{%
+        % Default case: With line
+        \vspace*{2ex}
+        \noindent\makebox[\linewidth]{\rule{\linewidth}{0.5pt}}\par
+        \vspace*{1ex}%
+    }{%
+        % Optional case: Without line
+        \vspace*{3ex}%
+    }%
+        {\large\textbf{\MakeUppercase{#2}}}\par % Makes the text uppercase
+    \vspace*{1.5ex}%
+}
+     
+\NewDocumentCommand{\headright}{o m}{%
+    \IfNoValueTF{#1}{%
+        % Default case: With line
+        \noindent\textcolor{cvblue}{\rule{\linewidth}{1pt}}\par
+        \vspace*{1ex}%
+    }{%
+        % Optional case: Without line
+        \vspace*{2ex}%
+    }%
+    {\large\textbf{\textcolor{cvblue} {\MakeUppercase{#2}}}}\par % Makes the text uppercase
+    %\vspace*{0.5ex}
 }
 
-\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
-     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
 
 \usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
 
@@ -81,52 +100,50 @@
 \noindent
 \null\hfill%
 \begin{tikzpicture}
-    \clip (0,0) circle (2cm);
-    \node at (0,0) {\includegraphics[width=4cm]{aaf.jpg}}; 
+    \clip (0,0) circle (1.75cm);
+    \node at (0,0) {\includegraphics[width=3.5cm]{aaf.jpg}}; 
 \end{tikzpicture}%
 \hfill\null
 
 \vspace*{1ex}
 % Localized centering for the name
 {\centering 
-\LARGE \textbf{\textsc{Antonia Frey}}\\
+\LARGE \textbf{\MakeUppercase{Antonia Frey}}\\
 }
-\vspace*{1ex}
 
 
-\normalsize 
-
-\headleft{About Me}
+%\headleft{About Me}
+\headleft[no-line]{About Me}
 \parbox{1\textwidth}{
 {\small
 \justifying
-\noindent Software Engineer with 4+ years of experience. Since the beginning of my career, I have contributed to diverse projects across industries like telecommunications, automotive, and energy, building applications from scratch, implementing new features, and finding solutions.\\
-As a team player, I enjoy working in agile, international teams. Beyond my technical skills, I am flexible, communicative, and always eager to learn new technologies and share knowledge. If there are any technologies or tools that I am not yet familiar with, I am eager to learn them.
+\noindent Software Engineer with 5+ years of experience. Since the beginning of my career, I have contributed to diverse projects across industries like telecommunications, automotive, and energy, building applications from scratch, implementing new features, and finding solutions. As a team player, I enjoy working in agile, international teams.
+Beyond my technical skills, I am flexible, communicative, and always eager to learn new technologies and share knowledge. If there are any tools or technologies that I am not yet familiar with, I am eager to learn them.
 }}
 
 
 \headleft{Contact}
 {\small
-\begin{tabular}{@{}l@{\hspace{0.5em}}l} % Left-align icons and add spacing between columns
-\faEnvelope & \href{mailto:antonia.frey@outlook.com}{antonia.frey@outlook.com} \\[1ex]
-\faPhone & \href{https://wa.me/+4915146782868}{+49 1514 6782868} \\[1ex]
+\begin{tabular}{@{}l@{\hspace{0.5em}}l}
+\faEnvelope & \href{mailto:antonia.frey@outlook.com}{antonia.frey@outlook.com} \\[0.8ex]
+\faPhone & \href{https://wa.me/+4915146782868}{+49 1514 6782868} \\[0.8ex]
 \faLinkedinSquare & \href{https://www.linkedin.com/in/antonia-alice-frey}{Antonia Alice Frey} \\[1ex]
-\faGithub & \href{https://github.com/thebughuntress}{thebughuntress} \\[1ex]
-\faHome & \href{https://antoniaalicefrey.com}{antoniaalicefrey.com} \\[1ex]
+\faGithub & \href{https://github.com/thebughuntress}{thebughuntress} \\[0.8ex]
+\faHome & \href{https://antoniaalicefrey.com}{antoniaalicefrey.com} \\[0.8ex]
 \end{tabular}
 }
 
 
-\headleft{Personal information}
+\headleft{Personal Information}
 {\small
 \begin{tabular}{@{}l@{\hspace{0.5em}}l@{}} % Align text with space between columns
-\textbf{Citizenship:} & Swiss, German \\[1ex]
+\textbf{Citizenship:} & Swiss, German \\[0.8ex]
 \textbf{Located in:}  & Freiburg (Germany) \\ 
-                      & Les Houches (France) \\[1ex]
-\textbf{Languages:}   & \\[1ex] % Empty space for separation
+                      & Les Houches (France) \\[0.8ex]
+\textbf{Languages:}   & \\[0.4ex] % Empty space for separation
 \end{tabular}
 
-\begin{itemize}[leftmargin=4em]
+\begin{itemize}[leftmargin=1em]
     \item German (native language, C2)
     \item English (C1)
     \item Spanish (C1)
@@ -168,7 +185,8 @@ As a team player, I enjoy working in agile, international teams. Beyond my techn
 %                 RIGHT COLUMN                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\headright{Experience}
+\headright[no-line]{Experience}
+%\headright{Experience}
 
 \renewcommand{\labelitemi}{$\diamond$}
 
@@ -177,7 +195,7 @@ As a team player, I enjoy working in agile, international teams. Beyond my techn
     {February 2022 -- Now}
 
 \begin{itemize}
-    \item Development of web applications, leveraging cloud technologies, for data visualization using frameworks like React, Vue, and Angular, using frontend libraries like MaterialUI and Bootstrap, with TypeScript or JavaScript.
+    \item Development of web applications, leveraging cloud technologies, for data visualization with React, Vue, Angular, and MaterialUI, with TypeScript or JavaScript.
  \item Translating client requirements into technical solutions, participating in meetings to ensure alignment with stakeholder expectations
      \item Delivering and testing urgent fixes, programming automated tests with Java/Selenium, Cypress, and unit testing with Jest
     \item Implemented Git integration within GitLab CI/CD pipelines to optimize version control and automate deployment workflows.
@@ -200,8 +218,10 @@ As a team player, I enjoy working in agile, international teams. Beyond my techn
     {Aug. 2019 -- Jan. 2020}
 
 \begin{itemize}
-    \item Automotive software development for an open-source simulator (CARLA.org) for autonomous driving research.
-    \item Programming traffic scenarios which describe traffic situations and vehicle behaviors like a lane change (with Python).
+   \item Automotive software development for an open-source simulator 
+{\hypersetup{urlcolor=black}\href{https://carla.org/}{CARLA.org}} used for autonomous driving research.
+
+    \item Programming traffic scenarios which describe traffic situations and vehicle behaviors like a lane change with Python.
     \item Debugging, testing, and implementing unsupported Parser features.
 \end{itemize}
 
@@ -214,7 +234,6 @@ As a team player, I enjoy working in agile, international teams. Beyond my techn
     \item Antenna measurements during test drives in disguised prototype cars.
     \item Organization of the annual tire change for vehicle fleets in coordination with vehicle bookings and mechanics as well as measurement and technical documentation of wheelbase parameters.
 \end{itemize}
-
 
 %%%%%%%%%% EDUCATION %%%%%%%%%%
 
