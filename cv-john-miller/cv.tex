@@ -23,8 +23,8 @@
 \newcommand{\is}{\par\vskip.5ex plus .4ex} 
 
 \newcommand{\job}[3]{%
-    \is
-    \textbf{\textcolor{cvblue} {\MakeUppercase{#1}}}\\
+    \vspace*{0.5ex}
+    \textbf{\textcolor{cvblue} {\MakeUppercase{#1}}}\\[0.5ex]
     \textbf{#2} \dates{#3}
 }
 
@@ -35,8 +35,9 @@
     \dates{#3}
 }
 
-\newcommand{\cert}[3]{%
-  #1 #2, \textit{#3}%
+\newcommand{\cert}[4]{
+\hypersetup{urlcolor=black}
+  #1 \textbf{\href{#4}{#2}}, \textit{#3}%
 }
 
 \newcommand{\dates}[1]{\hfill\mbox{#1}}
@@ -117,8 +118,7 @@
 \parbox{1\textwidth}{
 {\small
 \justifying
-\noindent Software Engineer with 5+ years of experience. Since the beginning of my career, I have contributed to diverse projects across industries like telecommunications, automotive, and energy, building applications from scratch, implementing new features, and finding solutions. As a team player, I enjoy working in agile, international teams.
-Beyond my technical skills, I am flexible, communicative, and always eager to learn new technologies and share knowledge. If there are any tools or technologies that I am not yet familiar with, I am eager to learn them.
+\noindent Software Engineer with 5+ years of experience. Since the beginning of my career, I have contributed to diverse projects across industries like telecommunications, automotive, and energy, building applications from scratch, implementing new features, and finding solutions. Beyond my technical skills, I am flexible, communicative, and motivated to expand my knowledge, master new concepts and share knowledge. If there are any tools or technologies that I am not yet familiar with, I am committed to learn them.
 }}
 
 
@@ -150,8 +150,6 @@ Beyond my technical skills, I am flexible, communicative, and always eager to le
     \item French (B1)
 \end{itemize}
 }
-
-
 
 \headleft{Technologies \& Tools}
 {\small
@@ -195,11 +193,11 @@ Beyond my technical skills, I am flexible, communicative, and always eager to le
     {February 2022 -- Now}
 
 \begin{itemize}
-    \item Development of web applications, leveraging cloud technologies, for data visualization with React, Vue, Angular, and MaterialUI, with TypeScript or JavaScript.
- \item Translating client requirements into technical solutions, participating in meetings to ensure alignment with stakeholder expectations
-     \item Delivering and testing urgent fixes, programming automated tests with Java/Selenium, Cypress, and unit testing with Jest
+    \item Development of web applications, leveraging cloud technologies, for data visualization with React, MaterialUI, with TypeScript or JavaScript, increasing user satisfaction through the implementation of new functionality.
+ \item Transforming client requirements into technical solutions, collaborated in meetings to ensure alignment with stakeholder expectations
+     \item Resolving bugs, validating urgent fixes, developing automated tests with Java/Selenium, Cypress, leading to a reduction in system downtime
     \item Implemented Git integration within GitLab CI/CD pipelines to optimize version control and automate deployment workflows.
-    \item Collaborated in an Agile Scrum environment using Git, Jira, and Confluence to manage tasks and document workflows.
+    \item Contributed to an agile SCRUM environment using Git, Jira, and Confluence to manage tasks and document workflows.
 \end{itemize}
 
 \job{System Analyst}
@@ -208,9 +206,9 @@ Beyond my technical skills, I am flexible, communicative, and always eager to le
 
 \begin{itemize}
     \item Automation of business-critical processes and implementation of new functionality in the company-wide production ERP system with Python.
-    \item Programming and changing VBA scripts to generate business reports.
-    \item Querying databases using SQL to ensure data accuracy and integrity.
-    \item Performing business analysis for new features, drafting user stories and acceptance criteria, and coordinating client meetings with stakeholders in Switzerland while collaborating within an international team comprising Spanish, German, and French-speaking colleagues.
+    \item Creating and optimizing VBA scripts to generate business reports.
+    \item Querying databases with SQL to ensure data accuracy and integrity.
+    \item Conducted business analysis for new features, drafting user stories and acceptance criteria, and coordinating client meetings with stakeholders in Switzerland while collaborating within an international team comprising Spanish, German, and French-speaking colleagues.
 \end{itemize}
 
 \job{Software Engineer (Internship)}
@@ -221,7 +219,7 @@ Beyond my technical skills, I am flexible, communicative, and always eager to le
    \item Automotive software development for an open-source simulator 
 {\hypersetup{urlcolor=black}\href{https://carla.org/}{CARLA.org}} used for autonomous driving research.
 
-    \item Programming traffic scenarios which describe traffic situations and vehicle behaviors like a lane change with Python.
+    \item Developed traffic scenarios which describe traffic situations and vehicle behaviors like a lane change with Python.
     \item Debugging, testing, and implementing unsupported Parser features.
 \end{itemize}
 
@@ -232,7 +230,7 @@ Beyond my technical skills, I am flexible, communicative, and always eager to le
 \begin{itemize}
     \item Developing a Windows desktop app with C\# to automatically translate bus communication protocols from LIN to CAN and vice versa.
     \item Antenna measurements during test drives in disguised prototype cars.
-    \item Organization of the annual tire change for vehicle fleets in coordination with vehicle bookings and mechanics as well as measurement and technical documentation of wheelbase parameters.
+    \item Coordination of the annual tire change for vehicle fleets, including vehicle bookings, mechanic scheduling, and measurement/technical documentation of wheelbase parameters.
 \end{itemize}
 
 %%%%%%%%%% EDUCATION %%%%%%%%%%
@@ -252,12 +250,12 @@ Beyond my technical skills, I am flexible, communicative, and always eager to le
 \headright{Certifications}
 
 \begin{itemize}
-\item \cert{2025}{ISTQB Certified Tester Foundation Level}{atsqa.org}
-\item \cert{2024}{Professional Python Programmer Level 1}{pythoninstitute.org}
-\item \cert{2023}{AWS Certified Cloud Practitioner}{Amazon}
-\item \cert{2023}{Google Cloud Engineer}{Google}
-\item \cert{2023}{Google Cloud Digital Leader}{Google}
-\item \cert{2022}{Professional Scrum Master I}{scrum.org}
+\item \cert{2024}{Professional Python Programmer Level 1}{pythoninstitute.org}{https://verify.openedg.org/?id=gqtL.HUbN.Eshb}
+\item \cert{2024}{ISTQB Certified Tester Foundation Level}{atsqa.org}{https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/}
+\item \cert{2023}{AWS Certified Cloud Practitioner}{Amazon}{https://www.credly.com/badges/d7c6436d-91aa-4124-a530-67f185f6f372/public_url}
+\item \cert{2023}{Google Cloud Engineer}{Google}{https://google.accredible.com/d46ea4b1-ef6d-4510-a2ed-23ae1cf0a7e6}
+\item \cert{2023}{Google Cloud Digital Leader}{Google}{https://www.credential.net/b68d248c-d7ac-4b19-9ee7-7bfecfccc8b2}
+\item \cert{2022}{Professional Scrum Master I}{scrum.org}{https://www.scrum.org/user/1062623}
 \end{itemize}
 
 
