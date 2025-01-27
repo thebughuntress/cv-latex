@@ -33,8 +33,7 @@
 \setlength{\parindent}{0pt} % Paragraph indentation
 \setlength{\parskip}{1em} % Vertical space between paragraphs
 
-\definecolor{cvblue}{HTML}{333333}
-%\definecolor{cvblue}{HTML}{FF0000}
+\definecolor{cvcolor}{HTML}{333333}
 
 
 %----------------------------------------------------------------------------------------
@@ -46,8 +45,8 @@
 %----------------------------------------------------------------------------------------
 
 % Import the personal data
-%\input{personal-data-local.tex}  
 \input{personal-data-example.tex}  
+%\input{personal-data-local.tex}
 
 %----------------------------------------------------------------------------------------
 % HEADER AND FOOTER CONFIGURATION
@@ -61,15 +60,15 @@
 
 % Set the footer rule width and color
 \renewcommand{\footrulewidth}{1pt} % Footer line thickness
-\renewcommand{\footrule}{\color{cvblue}\hrule} % Set footer line color to cvblue
+\renewcommand{\footrule}{\color{cvcolor}\hrule} % Set footer line color to cvcolor
 
 % Footer content with colored icons
 \fancyfoot[C]{%
     \vspace{0.2cm}\\
-    {\Large \textcolor{cvblue}{\href{mailto:\email}{\faEnvelope}}} \hspace{0.5cm}
-    {\Large \textcolor{cvblue}{\href{https://wa.me/\phone}{\faWhatsapp}}} \hspace{0.5cm}
-    {\Large \textcolor{cvblue}{\href{\github}{\faGithub}}} \hspace{0.5cm}
-    {\Large \textcolor{cvblue}{\href{\linkedin}{\faLinkedinSquare}}}
+    {\Large \textcolor{cvcolor}{\href{mailto:\email}{\faEnvelope}}} \hspace{0.5cm}
+    {\Large \textcolor{cvcolor}{\href{https://wa.me/\phone}{\faWhatsapp}}} \hspace{0.5cm}
+    {\Large \textcolor{cvcolor}{\href{\github}{\faGithub}}} \hspace{0.5cm}
+    {\Large \textcolor{cvcolor}{\href{\linkedin}{\faLinkedinSquare}}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -79,7 +78,7 @@
 % Add the colored box with name and address, starting from top-left corner
 \begin{tikzpicture}[remember picture, overlay]
     % Draw the blue block at the very top of the page, spanning the full width
-    \fill[cvblue] (current page.north west) rectangle ([yshift=-1.5in]current page.north east); % Blue block with height
+    \fill[cvcolor] (current page.north west) rectangle ([yshift=-1.5in]current page.north east); % Blue block with height
 
     % Add the text inside the blue block, aligned to the left
     \node[anchor=center, text=white] at ([yshift=-0.8in]current page.north -| current page.center) {
@@ -129,13 +128,13 @@
 To the Esteemed Hiring Team,
 \bigskip
 
-I am excited to apply for the \ROLE\ role at \COMPANY\ in \CITY. Since graduating in December 2020, I have been working as a software engineer with a primary focus on web development, Python programming, and some experience with cloud engineering.
+I am excited to apply for the \ROLE\ role at \COMPANY\ in \CITY. Since my graduation with a Master of Science degree in Electrical Engineering and Information Technology in December 2020, I have been working as a software engineer with a primary focus on Python programming, web development, and cloud engineering.
 
-Working in IT consulting has given me a strong foundation in web development with Python, React, TypeScript, and JavaScript. At Devoteam GmbH, I worked on projects across industries such as telecommunications, automotive, and energy. My role involved building new applications from the ground up, implementing new features, and fixing bugs while collaborating in agile and international teams and maintaining close contact with stakeholders to ensure alignment with business needs.
+Working in different fields and projects has given me a strong foundation in Python programming and web development with React, TypeScript, and JavaScript. At \companynow, I worked on projects across industries such as telecommunications, automotive, and energy. My role involved building new applications from the ground up, implementing new features, and fixing bugs while collaborating in agile and international teams and maintaining close contact with stakeholders to ensure alignment with business needs. During my master's internship at BMW, I developed an application in C\# for the automatic translation of bus protocols. This reduced the translation process from hours to seconds while simultaneously increasing robustness and reliability, significantly optimizing processes.
 
-Besides my technical background, I’d describe myself as flexible, communicative, and always eager to learn new technologies and share knowledge with others. My private GitHub profile reflects my passion for IT and programming beyond my professional projects. I thrive in collaborative environments, and working alongside skilled, motivated colleagues and supportive managers has contributed to my technical and personal growth. Along with enjoying the technical aspects, As a teamplayer, I also appreciate simplicity and thoughtful design, principles that lead to maintainable, efficient, and better solutions. I place a strong emphasis on testing to ensure that software is reliable, robust, and free from defects. If there are any skills in the job description that I am not yet familiar with, I am eager to learn them.
+Beyond my technical expertise, I am adaptable, communicative, and always eager to explore new technologies and share my knowledge. My personal GitHub profile showcases my passion for IT and programming, extending beyond professional projects. I thrive in collaborative environments, and working alongside skilled, motivated colleagues and supportive managers has contributed to my technical and personal growth. Along with enjoying the technical aspects, as a teamplayer, I also appreciate simplicity and thoughtful design, principles that lead to maintainable, efficient, and better solutions. I place a strong emphasis on testing to ensure that software is reliable, robust, and free from defects. If there are any skills in the job description that I am not yet familiar with, I am eager to learn them.
 
-After four years of working remotely, I am looking for a new opportunity in the IT sector in \CITY, offering strong career prospects. I am eager to find a hybrid work model within a supportive team atmosphere, working on agile projects where I can apply my expertise, learn new skills, and embrace new challenges.
+After about three years of working remotely as a software engineer, I am now looking for a new hybrid IT role that will allow me to relocate near \CITY. I am eager to find a role that offers strong career growth, a supportive team environment, and the opportunity to work on agile projects, where I can apply my expertise, learn new skills, and embrace new challenges.
 
 I am looking forward to hearing from \COMPANY. 
 
