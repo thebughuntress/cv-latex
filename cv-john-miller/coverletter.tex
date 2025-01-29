@@ -41,12 +41,12 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-% DATA
+% PERSONAL DATA
 %----------------------------------------------------------------------------------------
 
 % Import the personal data
-\input{personal-data-example.tex}  
-%\input{personal-data-local.tex}
+\input{../personal-data.tex}  
+%\input{../personal-data-local.tex}
 
 %----------------------------------------------------------------------------------------
 % HEADER AND FOOTER CONFIGURATION
@@ -65,10 +65,10 @@
 % Footer content with colored icons
 \fancyfoot[C]{%
     \vspace{0.2cm}\\
-    {\Large \textcolor{cvcolor}{\href{mailto:\email}{\faEnvelope}}} \hspace{0.5cm}
-    {\Large \textcolor{cvcolor}{\href{https://wa.me/\phone}{\faWhatsapp}}} \hspace{0.5cm}
-    {\Large \textcolor{cvcolor}{\href{\github}{\faGithub}}} \hspace{0.5cm}
-    {\Large \textcolor{cvcolor}{\href{\linkedin}{\faLinkedinSquare}}}
+    {\Large \textcolor{cvcolor}{\href{mailto:\emailAddress}{\faEnvelope}}} \hspace{0.5cm}
+    {\Large \textcolor{cvcolor}{\href{https://wa.me/\phoneNumber}{\faWhatsapp}}} \hspace{0.5cm}
+    {\Large \textcolor{cvcolor}{\href{\githubUrl}{\faGithub}}} \hspace{0.5cm}
+    {\Large \textcolor{cvcolor}{\href{\linkedinUrl}{\faLinkedinSquare}}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@
         
         \hfill 
 \begin{tabular}{@{}p{0.5cm}l@{}}   
- & \textbf{\name} \\[0.8ex]
+ & \textbf{\firstName\ \lastName} \\[0.8ex]
  & \street \\[0.4ex] 
  & \city \\[0.4ex] 
  & \country\\[0.8ex] 
@@ -144,6 +144,6 @@ Sincerely,
 
 \vspace{20pt}
 
-\name
+\firstName\ \lastName
 
 \end{document}

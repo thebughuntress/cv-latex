@@ -22,7 +22,7 @@
 %\definecolor{cvcolor}{HTML}{FF0000} %1E3A8A 3C3C3C
 \newcommand{\is}{\par\vskip.5ex plus .4ex} 
 
-\newcommand{\job}[3]{%
+\newcommand{\experience}[3]{%
     \vspace*{0.5ex}
     \textbf{\textcolor{cvcolor} {\MakeUppercase{#1}}}\\[0.5ex]
     \textbf{#2} \dates{#3}
@@ -72,6 +72,15 @@
 
 
 \usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 PERSONAL DATA                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Import the personal data
+%\input{../personal-data.tex}  
+\input{../personal-data-local.tex}
 
 \begin{document}
 
@@ -125,11 +134,11 @@
 \headleft{Contact}
 {\small
 \begin{tabular}{@{}l@{\hspace{0.5em}}l}
-\faEnvelope & \href{mailto:antonia.frey@outlook.com}{antonia.frey@outlook.com} \\[0.8ex]
-\faPhone & \href{https://wa.me/+4915146782868}{+49 1514 6782868} \\[0.8ex]
-\faLinkedinSquare & \href{https://www.linkedin.com/in/antonia-alice-frey}{Antonia Alice Frey} \\[1ex]
-\faGithub & \href{https://github.com/thebughuntress}{thebughuntress} \\[0.8ex]
-\faHome & \href{https://antoniaalicefrey.com}{antoniaalicefrey.com} \\[0.8ex]
+\faEnvelope & \href{mailto:\emailAddress}{\emailAddress} \\[0.8ex]
+\faPhone & \href{https://wa.me/\phoneNumber}{\phoneNumber} \\[0.8ex]
+\faLinkedinSquare & \href{\linkedinUrl}{\linkedinName} \\[1ex]
+\faGithub & \href{\githubUrl}{\githubName} \\[0.8ex]
+\faHome & \href{https://\homepageUrl}{\homepageUrl} \\[0.8ex]
 \end{tabular}
 }
 
@@ -188,7 +197,7 @@
 
 \renewcommand{\labelitemi}{$\diamond$}
 
-\job{Software Engineer · IT Consultant}
+\experience{Software Engineer · IT Consultant}
     {Devoteam GmbH, Frankfurt, Germany · Remote}
     {February 2022 -- Now}
 
@@ -200,7 +209,7 @@
     \item Contributed to an agile SCRUM environment using Git, Jira, and Confluence to manage tasks and document workflows.
 \end{itemize}
 
-\job{System Analyst}
+\experience{System Analyst}
     {ELCA Informatique SA, Granada, Spain · Switzerland}  
     {Jan. 2021 -- Jan. 2022}
 
@@ -211,7 +220,7 @@
     \item Conducted business analysis for new features, drafting user stories and acceptance criteria, and coordinating client meetings with stakeholders in Switzerland while collaborating within an international team comprising Spanish, German, and French-speaking colleagues.
 \end{itemize}
 
-\job{Software Engineer (Internship)}
+\experience{Software Engineer (Internship)}
     {Intel Labs, Karlsruhe, Germany}  
     {Aug. 2019 -- Jan. 2020}
 
@@ -223,7 +232,7 @@
     \item Debugging, testing, and implementing unsupported Parser features.
 \end{itemize}
 
-\job{System Engineer (Internship)}
+\experience{System Engineer (Internship)}
     {BMW M, Munich, Germany}  
     {Sep. 2018 -- Feb. 2019}
     
