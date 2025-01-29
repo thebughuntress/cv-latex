@@ -16,9 +16,9 @@
 %-------------------------------------------------------------------------------
 % PERSONAL DATA
 %-------------------------------------------------------------------------------
+%\input{../personal-data-local.tex}
+\input{../personal-data.tex}
 
-%\input{../personal-data.tex}
-\input{../personal-data-local.tex}
 
 
 \newcommand{\COMPANY}{COMPANY}
@@ -37,11 +37,8 @@
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-%\colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-\definecolor{awesome}{HTML}{0732b3}
+% \definecolor{awesome}{HTML}{CA63A8}
+\definecolor{awesome}{HTML}{\cvcolor}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -63,7 +60,7 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{./images/photo}
+\photo[circle,noedge,left]{\imageFileName}
 \name{\firstName}{\lastName}
 \position{\job}
 \address{\street , \zipCode\ \city , \country}

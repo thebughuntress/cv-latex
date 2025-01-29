@@ -16,9 +16,9 @@
 %-------------------------------------------------------------------------------
 % PERSONAL DATA
 %-------------------------------------------------------------------------------
+%\input{../personal-data-local.tex}
+\input{../personal-data.tex}
 
-%\input{../personal-data.tex}
-\input{../personal-data-local.tex}
 
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
@@ -30,11 +30,8 @@
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
+\definecolor{awesome}{HTML}{\cvcolor}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -56,7 +53,7 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{./images/photo}
+\photo[circle,noedge,left]{\imageFileName}
 \name{\firstName}{\lastName}
 \position{\job}
 \address{\street , \zipCode\ \city , \country}
@@ -64,7 +61,7 @@
 \mobile{+4915146782868}
 \email{\emailAddress}
 %\homepage{\homepageUrl}{\homepageName}
-%\github{\githubName}
+\github{\githubName}
 \linkedin{\linkedinUrl}{\linkedinName}
 %\dateofbirth{\birthday}
 
@@ -105,12 +102,12 @@
 \input{cv/education.tex}
 \input{cv/skills.tex}
 \input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/certificates.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+\input{cv/certifications.tex}
+%\input{cv/extracurricular.tex}
+%\input{cv/honors.tex}
+%\input{cv/presentation.tex}
+%\input{cv/writing.tex}
+%\input{cv/committees.tex}
 
 
 %-------------------------------------------------------------------------------
