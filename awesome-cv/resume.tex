@@ -11,24 +11,24 @@
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
 
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-\input{constants/configurations.tex}
-
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% Specify the location of the included fonts
-\fontdir[fonts/]
-
 % Color for highlights
-\definecolor{awesome}{HTML}{\COLOR}
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{3E6D9C}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -36,9 +36,10 @@
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{\HIGHLIGHT_TITLES}
+\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -48,31 +49,38 @@
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
-\input{constants/personal-information.tex}
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[right,rectangle,noedge]{./photo/photo.jpg}
-\name{\FIRST_NAME}{\LAST_NAME}
-\position{\POSITION}
-%\address{\ADRESS}
-\mobile{\MOBILE}
-\email{\EMAIL}
-\github{\GITHUB}
-\linkedin{\LINKEDIN}
-\homepage{\HOMEPAGE}
-% \gitlab{\GITLAB}
-% \stackoverflow{\SO_ID}{\SO_NAME}
-% \twitter{\TWITTER}
-% \skype{\SKYPE}
-% \reddit{\REDDIT_ID}
-% \medium{\MEDIUM_ID}
-% \googlescholar{\GOOGLE_SCHOLAR_ID}{\GOOGLE_SCHOLAR_NAME}
-% \extrainfo{\EXTRA_INFO}
-\quote{\QUOTE}
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Byungjin}{Park}
+\position{Site Reliability Engineer{\enskip\cdotp\enskip}Software Architect}
+\address{235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea}
+
+\mobile{(+82) 10-9030-1843}
+\email{posquit0.bj@gmail.com}
+%\dateofbirth{January 1st, 1970}
+\homepage{www.posquit0.com}
+\github{posquit0}
+\linkedin{posquit0}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+\quote{``Be the change that you want to see in the world."}
+
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
+% Print the header with above personal information
 % Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
 
@@ -90,12 +98,13 @@
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
 \input{resume/experience.tex}
+\input{resume/honors.tex}
+\input{resume/certificates.tex}
+% \input{resume/presentation.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
 \input{resume/education.tex}
-%\input{resume/honors.tex}
-%\input{resume/presentation.tex}
-%\input{resume/writing.tex}
-%\input{resume/committees.tex}
-%\input{resume/extracurricular.tex}
+% \input{resume/extracurricular.tex}
 
 
 %-------------------------------------------------------------------------------
