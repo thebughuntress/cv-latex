@@ -14,17 +14,28 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{xparse}
-    
-\setlist{parsep=0pt, topsep=0pt, partopsep=1pt, itemsep=1pt, leftmargin=6mm}       
-\renewcommand{\familydefault}{\sfdefault}
 
-\definecolor{cvcolor}{HTML}{333333} %1E3A8A 3C3C3C
-%\definecolor{cvcolor}{HTML}{FF0000} %1E3A8A 3C3C3C
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 PERSONAL DATA                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Import the personal data
+\input{../personal-data.tex}
+%\input{../personal-data-example.tex} 
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 SETTINGS                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{cvblue}{HTML}{\cvcolor} %1E3A8A 3C3C3C
+%\definecolor{cvblue}{HTML}{FF0000} %1E3A8A 3C3C3C
 \newcommand{\is}{\par\vskip.5ex plus .4ex} 
 
+\setlist{parsep=0pt, topsep=0pt, partopsep=1pt, itemsep=1pt, leftmargin=6mm}       
+\renewcommand{\familydefault}{\sfdefault}
 \newcommand{\experience}[3]{%
     \vspace*{0.5ex}
-    \textbf{\textcolor{cvcolor} {\MakeUppercase{#1}}}\\[0.5ex]
+    \textbf{\textcolor{cvblue} {\MakeUppercase{#1}}}\\[0.5ex]
     \textbf{#2} \dates{#3}
 }
 
@@ -60,27 +71,18 @@
 \NewDocumentCommand{\headright}{o m}{%
     \IfNoValueTF{#1}{%
         % Default case: With line
-        \noindent\textcolor{cvcolor}{\rule{\linewidth}{1pt}}\par
+        \noindent\textcolor{cvblue}{\rule{\linewidth}{1pt}}\par
         \vspace*{1ex}%
     }{%
         % Optional case: Without line
         \vspace*{2ex}%
     }%
-    {\large\textbf{\textcolor{cvcolor} {\MakeUppercase{#2}}}}\par % Makes the text uppercase
+    {\large\textbf{\textcolor{cvblue} {\MakeUppercase{#2}}}}\par % Makes the text uppercase
     %\vspace*{0.5ex}
 }
 
 
-\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 PERSONAL DATA                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Import the personal data
-%\input{../personal-data.tex}  
-\input{../personal-data-local.tex}
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref} 
 
 \begin{document}
 
@@ -96,10 +98,10 @@
 %                 LEFT COLUMN                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[t]{0.33\textwidth} 
-\colorbox{cvcolor}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
 
 \vspace{-.2ex} 
-\colorbox{cvcolor!90}{\color{white}  
+\colorbox{cvblue!90}{\color{white}  
 \kern0.09\textwidth\relax
 \begin{minipage}[t][293mm][t]{0.82\textwidth}
 \raggedright
@@ -111,14 +113,14 @@
 \null\hfill%
 \begin{tikzpicture}
     \clip (0,0) circle (1.75cm);
-    \node at (0,0) {\includegraphics[width=3.5cm]{aaf.jpg}}; 
+    \node at (0,0) {\includegraphics[width=3.5cm]{\imageFileName}}; 
 \end{tikzpicture}%
 \hfill\null
 
 \vspace*{1ex}
 % Localized centering for the name
 {\centering 
-\LARGE \textbf{\MakeUppercase{Antonia Frey}}\\
+\LARGE \textbf{\MakeUppercase{\firstName\ \lastName}}\\
 }
 
 
@@ -138,7 +140,7 @@
 \faPhone & \href{https://wa.me/\phoneNumber}{\phoneNumber} \\[0.8ex]
 \faLinkedinSquare & \href{\linkedinUrl}{\linkedinName} \\[1ex]
 \faGithub & \href{\githubUrl}{\githubName} \\[0.8ex]
-\faHome & \href{https://\homepageUrl}{\homepageUrl} \\[0.8ex]
+\faHome & \href{https://\homepageUrl}{\homepageName} \\[0.8ex]
 \end{tabular}
 }
 

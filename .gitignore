@@ -2,7 +2,7 @@
 local/
 
 # Ignore files
-personal-data-local.tex
+personal-data.tex
 
 # Ignore specific file types
 *.bak
