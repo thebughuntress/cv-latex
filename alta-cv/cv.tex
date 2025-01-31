@@ -12,6 +12,15 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
 
+
+
+% PERSONAL DATA
+% Import the personal data
+\input{../shared/personal-data-example.tex}
+%\input{../shared/personal-data.tex}  
+
+
+
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
@@ -74,21 +83,18 @@
 \addbibresource{sample.bib}
 
 \begin{document}
-\name{Antonia Alice Frey}
-\tagline{Software Engineer \& IT Consultant \& Proud Geek}
-\photoR{2.5cm}{./photo/photo.jpg}
+\name{\firstName\ \secondName\ \lastName}
+\tagline{\job}
+\photoR{2.5cm}{\imageFileName}
 %\photoL{2cm}{./photo/photo.jpg}
 \personalinfo{
   % Not all of these are required!
-  \email{antonia.frey@outlook.com}
+  \email{\emailAddress}
   %\phone{}
-  %\mailaddress{Address, Street, County}
-  \location{Freiburg, Germany}
+  \location{\city, \country}
   %\homepage{}
-  %\twitter{}
-  \linkedin{antonia-alice-frey}
-  \github{thisisfrey}
-  % \orcid{}
+  \linkedin{\linkedinName}
+  \github{\githubName}
   %% You can add your own arbitrary detail with
   %% \printinfo{symbol}{detail}[optional hyperlink prefix]
   %% \printinfo{\faPaw}{Hey ho!}
