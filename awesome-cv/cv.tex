@@ -18,8 +18,8 @@
 %-------------------------------------------------------------------------------
 % Import the personal data
 %\input{PATHTOFILEX}
-\input{../shared/personal-data-example.tex}
-%\input{../shared/personal-data.tex}  
+%\input{../shared/personal-data-example.tex}
+\input{../shared/personal-data.tex}  
 
 
 %-------------------------------------------------------------------------------
@@ -55,10 +55,11 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{\imageFileName}
+\photo[circle,noedge,left]{\imagePath}
 \name{\firstName}{\lastName}
 \position{\job}
-\address{\street , \zipCode\ \city , \country}
+%\address{\street , \zipCode\ \city , \country}
+\address{\city , \country}
 
 \mobile{+4915146782868}
 \email{\emailAddress}

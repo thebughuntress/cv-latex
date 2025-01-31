@@ -417,17 +417,17 @@
 %% Define helper macros a user can change easily
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterPositionSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
+\newcommand{\acvHeaderAfterNameSkip}{.2mm}
+\newcommand{\acvHeaderAfterPositionSkip}{.2mm}
+\newcommand{\acvHeaderAfterAddressSkip}{-.2mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
-\newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+\newcommand{\acvHeaderAfterSocialSkip}{3mm}
+\newcommand{\acvHeaderAfterQuoteSkip}{3mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{1mm}
+\newcommand{\acvSectionContentTopSkip}{2mm}
 
 
 %-------------------------------------------------------------------------------
@@ -673,7 +673,7 @@
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 7cm} R{7cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -721,9 +721,17 @@
   \end{center}
 }
 % Define a line of cv information(honor, award or something else)
-% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
-\newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}\ifempty{#2}{}{,} \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}{<link>}
+\newcommand*{\cvhonor}[5]{%
+  \honordatestyle{#4} & \href{#5}{\honorpositionstyle{#1}}\ifempty{#2}{}{,} \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+}
+
+% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}[<link>]
+\newcommand*{\cvhonorx}[5][]{%
+  \honordatestyle{#4} & 
+  \honorpositionstyle{#1}\ifempty{#2}{}{,} 
+  \ifempty{#5}{\honortitlestyle{#2}}{\honortitlestyle{\href{#5}{#2}}} & 
+  \honorlocationstyle{#3} \\
 }
 
 % Define an environment for cvskill
