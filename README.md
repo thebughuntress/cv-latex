@@ -26,7 +26,7 @@ Additionally, a **shared** folder has been included, which is utilized across th
 ### alta-cv
 
 - **Source:** [Recreating Business Insider's CV of Marissa Mayer-Template](https://www.overleaf.com/latex/templates/recreating-business-insiders-cv-of-marissa-mayer/gtqfpbwncfvp)
-- Document: [CV-Antonia-Alice-Frey.pdf](./alta-cv/CV-Antonia-Alice-Frey.pdf)
+- Document: [CV-Antonia-Alice-Frey.pdf](./alta-cv/cv.pdf)
 
 ---
 
